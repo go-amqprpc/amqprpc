@@ -99,7 +99,7 @@ To invoke one, a client first dials the server:
 ~~~go
 package X
 
-client, err := NewClient(AMQPURI)
+client, err := amqprpc.NewClient(AMQPURI)
 if err != nil {
         panic(err)
 }

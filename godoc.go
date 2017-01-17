@@ -71,7 +71,7 @@ package amqprpc
 
 		package X
 
-		client, err := NewClient(AMQPURI)
+		client, err := amqprpc.NewClient(AMQPURI)
 		if err != nil {
 		        panic(err)
 		}
