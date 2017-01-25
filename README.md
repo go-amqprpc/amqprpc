@@ -14,7 +14,7 @@ implementation is intended to follow to certain extent RabbitMQ tutorial
 
 *Beta*
 
-[![Build Status](https://travis-ci.org/go-amqprpc/amqprpc.svg?branch=master)](https://travis-ci.org/go-amqprpc/amqprpc) [![Coverage Status](https://coveralls.io/repos/github/go-amqprpc/amqprpc/badge.svg?branch=master)](https://coveralls.io/github/go-amqprpc/amqprpc?branch=master) [![GoDoc](https://godoc.org/gopkg.in/amqprpc.v0?status.svg)](https://godoc.org/gopkg.in/amqprpc.v0)
+[![Build Status](https://travis-ci.org/go-amqprpc/amqprpc.svg?branch=master)](https://travis-ci.org/go-amqprpc/amqprpc) [![Coverage Status](https://coveralls.io/repos/github/go-amqprpc/amqprpc/badge.svg?branch=master)](https://coveralls.io/github/go-amqprpc/amqprpc?branch=master) [![GoDoc](https://godoc.org/github.com/go-amqprpc/amqprpc?status.svg)](https://godoc.org/github.com/go-amqprpc/amqprpc)
 
 
 ## Usage
@@ -22,13 +22,13 @@ implementation is intended to follow to certain extent RabbitMQ tutorial
 ### Go get
 
 ~~~
-go get gopkg.in/amqprpc.v0
+go get -u github.com/go-amqprpc/amqprpc
 ~~~
 
 ### Import
 
 ~~~go
-import "gopkg.in/amqprpc.v0"
+import "github.com/go-amqprpc/amqprpc"
 ~~~
 
 ### Examples
@@ -74,6 +74,8 @@ The server calls for AMQP service:
 ~~~go
 package X
 
+import "github.com/go-amqprpc/amqprpc"
+
 const (
         RPCQueueName = "rpc_queue"
         AMQPURI = "amqp://guest:guest@127.0.0.1:5672//"
@@ -98,6 +100,8 @@ To invoke one, a client first dials the server:
 
 ~~~go
 package X
+
+import "github.com/go-amqprpc/amqprpc"
 
 client, err := amqprpc.NewClient(AMQPURI)
 if err != nil {
