@@ -1,5 +1,3 @@
-package amqprpc
-
 // This source file is part of the AMQP-RPC open source project
 // Licensed under Apache License v2.0
 // See LICENSE file for license information
@@ -110,14 +108,15 @@ package amqprpc
 		// check errors, print, etc.
 
 */
+package amqprpc
 
 import (
 	"bytes"
 	"crypto/tls"
 	"errors"
 	"fmt"
+	"github.com/go-amqpirq/amqpirq"
 	"github.com/streadway/amqp"
-	"gopkg.in/amqpirq.v0"
 	"log"
 	"math"
 	"net/rpc"
